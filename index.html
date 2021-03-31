@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenges</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container-1">
+		<!-- challenge-1: -->
+		<h2>Challenge 1 : Your Age in Days</h2>
+		<div class="flex-box-container">
+			<div>
+				<button class="btn btn-primary" onclick="calculate()">Click ME</button>
+			</div>
+			<div>
+				<button class="btn btn-danger" onclick="remove()">Remove</button>
+			</div>
+		</div>
+		<div id="result"></div>
+
+		<!-- challenge-2: -->
+		<h2>Challenge 2 : Cat Generator</h2>
+		<div class="flex-box-container">
+			<button class="btn btn-primary" onclick="generate()">Generate Cat</button>
+		</div>
+		<div class="flex-box-container" id="generatecat">
+		</div>
+
+		<!-- challenge-3: -->
+		<h2>Challenge 3 : Rock, Paper, Scissors</h2>
+		<div class="flex-box-container" id="results">
+			<img src="rock.jpg" id='rock' onclick="game(this)">
+			<img src="paper.jpg" id='paper' onclick="game(this)">
+			<img src="Scissor.jpg" id='scissor' onclick="game(this)">
+		</div>
+		<!-- challeng-4: -->
+		<h2>Challenge 4 : Change the color of All Buttons</h2>
+		<div class="flex-box-container">
+			<select name="changebtncolor" id="changebtncolor" onchange="buttoncolorchange(this.value)">
+				<option value="random">Random</option>
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+				<option value="reset">Reset</option>
+			</select>
+			<button class="btn btn-primary">Wee!</button>
+			<button class="btn btn-danger">Yahoo!</button>
+			<button class="btn btn-warning">Google!</button>
+			<button class="btn btn-success">Facebook!</button>
+		</div>
+
+		<!-- challenge-5: -->
+		<h2>Challenge 5 : Blackjack</h2>
+		<div style="text-align: center;">
+			<h3><span id="status">Let's Play</span></h3>
+		</div>
+		<div class="flex-box-blackjack">
+			<div id="yourbox" style="flex: 1; border: 1px solid black;">
+				<h3 style="text-align: center;">You : <span id="yourscore">0</span></h3>
+			</div>
+			<div id="dealerbox" style="flex: 1; border: 1px solid black;">
+				<h3 style="text-align: center;">Dealer : <span id="dealerscore">0</span></h3>
+			</div>
+		</div>
+		<div class="flex-box-container" style="border: none;">
+			<div style="border: 1px solid black; padding: 10px; text-align: center;">
+				<button class="btn btn-primary" id="hit">Hit</button>
+				<button class="btn btn-warning" id="stand">Stand</button>
+				<button class="btn btn-danger" id="deal">Deal</button>
+			</div>
+		</div>
+		<div style="padding-top: 20px; padding-bottom: 20px;">
+			<table style="margin-left: auto; margin-right: auto;">
+				<tr>
+					<th>Wins</th>
+					<th>Losses</th>
+					<th>Draws</th>
+				</tr>
+				<tr>
+					<td><span id="wins">0</span></td>
+					<td><span id="losses">0</span></td>
+					<td><span id="draws">0</span></td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
